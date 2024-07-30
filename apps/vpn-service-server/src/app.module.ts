@@ -4,6 +4,8 @@ import { ServerLocationsModule } from "./serverLocations/serverLocations.module"
 import { SubscriptionPlansModule } from "./subscriptionPlans/subscriptionPlans.module";
 import { VpnConnectionsModule } from "./vpnConnections/vpnConnections.module";
 import { UsersModule } from "./users/users.module";
+import { AdminModule } from "./admin/admin.module";
+import { TokenModule } from "./token/token.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -26,6 +28,8 @@ import { AuthModule } from "./auth/auth.module";
     SubscriptionPlansModule,
     VpnConnectionsModule,
     UsersModule,
+    AdminModule,
+    TokenModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,
