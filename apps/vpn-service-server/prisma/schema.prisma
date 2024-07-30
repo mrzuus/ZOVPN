@@ -62,3 +62,20 @@ model Users {
   updatedAt          DateTime           @updatedAt
   username           String?
 }
+
+model Admin {
+  createdAt DateTime @default(now())
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  password  String?
+  role      String?
+  updatedAt DateTime @updatedAt
+  username  String?
+}
+
+model Token {
+  createdAt DateTime @default(now())
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  isValid   Boolean?
+  token     String?
+  updatedAt DateTime @updatedAt
+}

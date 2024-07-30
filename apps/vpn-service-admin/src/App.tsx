@@ -25,6 +25,14 @@ import { UsersList } from "./users/UsersList";
 import { UsersCreate } from "./users/UsersCreate";
 import { UsersEdit } from "./users/UsersEdit";
 import { UsersShow } from "./users/UsersShow";
+import { AdminList } from "./admin/AdminList";
+import { AdminCreate } from "./admin/AdminCreate";
+import { AdminEdit } from "./admin/AdminEdit";
+import { AdminShow } from "./admin/AdminShow";
+import { TokenList } from "./token/TokenList";
+import { TokenCreate } from "./token/TokenCreate";
+import { TokenEdit } from "./token/TokenEdit";
+import { TokenShow } from "./token/TokenShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -85,6 +93,20 @@ const App = (): React.ReactElement => {
           edit={UsersEdit}
           create={UsersCreate}
           show={UsersShow}
+        />
+        <Resource
+          name="Admin"
+          list={AdminList}
+          edit={AdminEdit}
+          create={AdminCreate}
+          show={AdminShow}
+        />
+        <Resource
+          name="Token"
+          list={TokenList}
+          edit={TokenEdit}
+          create={TokenCreate}
+          show={TokenShow}
         />
       </Admin>
     </div>
